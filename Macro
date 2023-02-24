@@ -1,0 +1,398 @@
+Arquivo em: https://1drv.ms/x/s!Au5HANlfqUx3pooBg_op4ZROQ3_XhA?e=KGBfxe
+Sub Teste1()
+
+coluna = 2
+linha = 2
+linha_resultado = 3
+Sheets("Cenários Simular").Select
+Do Until Cells(linha, coluna) = ""
+Sheets("Cenários Simular").Select
+    Do Until Cells(linha, coluna) = ""
+        Cells(linha, coluna).Select
+        Selection.Copy
+        Sheets("Cálculo").Select
+        
+        If coluna = 2 Then
+        Cells(2, 2).Select
+        
+        ElseIf coluna = 3 Then
+        Cells(3, 2).Select
+        
+        ElseIf coluna = 4 Then
+        Cells(5, 2).Select
+        
+        ElseIf coluna = 5 Then
+        Cells(6, 2).Select
+        
+        ElseIf coluna = 6 Then
+        Cells(7, 2).Select
+        
+        ElseIf coluna = 7 Then
+        Cells(8, 2).Select
+        
+        ElseIf coluna = 8 Then
+        Cells(9, 2).Select
+        
+        End If
+        
+        ActiveSheet.Paste
+        Sheets("Cenários Simular").Select
+        coluna = coluna + 1
+    Loop
+
+    
+
+coluna_concatenado = coluna + 1
+Sheets("Cenários Simular").Select
+Range(Cells(linha, coluna_concatenado).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 1).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TMA - Otimista
+'
+Sheets("Cálculo").Select
+Range(Cells(102, 7).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 2).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Soma VPs (Ano 1 a 5) - Otimista
+'
+Sheets("Cálculo").Select
+Range(Cells(101, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 3).Address()).PasteSpecial Paste:=xlPasteValues
+
+'VPL do Projeto - Otimista
+'
+Sheets("Cálculo").Select
+Range(Cells(102, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 4).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TIR - Otimista
+'
+Sheets("Cálculo").Select
+Range(Cells(103, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 5).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Taxa de Lucratividade - Otimista
+'
+Sheets("Cálculo").Select
+Range(Cells(104, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 6).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Tempo de Payback - Otimista
+'
+Sheets("Cálculo").Select
+Range(Cells(105, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 7).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TMA - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(133, 7).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 8).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Soma VPs (Ano 1 a 5) - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(132, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 9).Address()).PasteSpecial Paste:=xlPasteValues
+
+'VPL do Projeto - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(133, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 10).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TIR - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(134, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 11).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Taxa de Lucratividade - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(135, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 12).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Tempo de Payback - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(136, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 13).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TMA - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(164, 7).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 14).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Soma VPs (Ano 1 a 5) - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(163, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 15).Address()).PasteSpecial Paste:=xlPasteValues
+
+'VPL do Projeto - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(164, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 16).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TIR - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(165, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 17).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Taxa de Lucratividade - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(166, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 18).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Tempo de Payback - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(167, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 19).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo mínimo ao ano apurado - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(119, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 20).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo mínimo ao ano apurado - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(119, 3).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 21).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo máximo ao ano para payback em 5 anos - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(121, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 22).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Lucro mínimo ao ano para payback em 5 anos - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(122, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 23).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TMA - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(122, 7).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 24).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Soma VPs (Ano 1 a 5) - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(121, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 25).Address()).PasteSpecial Paste:=xlPasteValues
+
+'VPL do Projeto - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(122, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 26).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TIR - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(123, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 27).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Taxa de Lucratividade - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(124, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 28).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Tempo de Payback - Pessimista
+'
+Sheets("Cálculo").Select
+Range(Cells(125, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 29).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo mínimo ao ano apurado - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(150, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 30).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo máximo ao ano apurado - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(150, 3).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 31).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo máximo ao ano para payback em 5 anos - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(152, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 32).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Lucro mínimo ao ano para payback em 5 anos - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(153, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 33).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TMA - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(153, 7).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 34).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Soma VPs (Ano 1 a 5) - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(152, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 35).Address()).PasteSpecial Paste:=xlPasteValues
+
+'VPL do Projeto - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(153, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 36).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TIR - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(154, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 37).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Taxa de Lucratividade - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(155, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 38).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Tempo de Payback - Intermediário
+'
+Sheets("Cálculo").Select
+Range(Cells(156, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 39).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo mínimo ao ano apurado - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(181, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 40).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo máximo ao ano apurado - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(181, 3).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 41).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Custo máximo ao ano para payback em 5 anos - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(183, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 42).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Lucro mínimo ao ano para payback em 5 anos - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(184, 2).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 43).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TMA - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(184, 7).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 44).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Soma VPs (Ano 1 a 5) - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(183, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 45).Address()).PasteSpecial Paste:=xlPasteValues
+
+'VPL do Projeto - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(184, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 46).Address()).PasteSpecial Paste:=xlPasteValues
+
+'TIR - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(185, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 47).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Taxa de Lucratividade - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(186, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 48).Address()).PasteSpecial Paste:=xlPasteValues
+
+'Tempo de Payback - Favorável
+'
+Sheets("Cálculo").Select
+Range(Cells(187, 14).Address()).Copy
+Sheets("Resultado da Análise").Select
+Range(Cells(linha_resultado, 49).Address()).PasteSpecial Paste:=xlPasteValues
+
+
+
+
+
+linha_resultado = linha_resultado + 1
+linha = linha + 1
+coluna = 2
+Sheets("Cenários Simular").Select
+Loop
+
+End Sub
+
